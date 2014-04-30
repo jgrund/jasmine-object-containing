@@ -5,13 +5,28 @@ A simple matcher that wraps jasmine.objectContaining
 
 
 ## Usage
+In Node:
 
-Make sure the jasmine-object-containing.js file is executed early in your tests, it uses `beforeEach` to register the matcher.
+```javascript
+  var toContainObject = require('jasmine-object-containing').toContainObject;
+
+  beforeEach(function () {
+    this.addMatchers(toContainObject);
+  });
+```
+
+In the browser:
+
+```javascript
+  beforeEach(function () {
+    this.addMatchers(toContainObject);
+  });
+```
 
 ## Example
 
 ```javascript
-var obj =  {
+var obj = {
   foo: function () {},
   bar: 3,
   baz: 10

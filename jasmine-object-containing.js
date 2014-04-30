@@ -1,5 +1,7 @@
-beforeEach(function() {
-  this.addMatchers({
+(function (exportContext) {
+  'use strict';
+
+  exportContext.toContainObject = {
     toContainObject: function(expected) {
       var mismatchKeys = [],
         mismatchValues = [],
@@ -36,5 +38,5 @@ beforeEach(function() {
       return objectContaining
         .jasmineMatches(this.actual, mismatchKeys, mismatchValues);
     }
-  });
-});
+  };
+}(module && module.exports || window));
