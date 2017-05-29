@@ -1,6 +1,8 @@
 jasmine-object-containing
 =========================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jgrund/jasmine-object-containing.svg)](https://greenkeeper.io/)
+
 A simple matcher that wraps jasmine.objectContaining
 
 
